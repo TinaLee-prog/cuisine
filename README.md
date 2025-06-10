@@ -15,6 +15,7 @@
       searchDestination();
     }
   });
+  ```
   
   // 當輸入內容清空時，自動還原所有資料
   $("#searchInput").on("input", function () {
@@ -23,7 +24,7 @@
       showData(allData);
     }
   });
-  `````````````
+  ```
 
 2. 整合政府開放資料 API
    - 串接 農委會旅遊美食 Open Data，即時取得最新的農村美食資訊。
