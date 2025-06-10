@@ -30,14 +30,28 @@
 3. 一鍵導航至 Google Maps
    - 點擊「導航」按鈕即可跳轉 Google Maps，快速查找地點位置與路線。
 
-4. 純前端實作
-   - 使用 HTML, CSS, jQuery 開發，無需後端伺服器即可運作。
+```js```
+function openMap(address) {
+      window.open(
+        `https://maps.google.com/?q=${encodeURIComponent(address)}`,
+        "_blank"
+      );
+    }
+````````
 
-5. 資料完整性檢查
+4. 資料完整性檢查
    - 過濾資料中缺少圖片或名稱的不完整項目，提升使用者體驗。
 
-6. RWD 響應式設計（建議可加入此項，如你有設計 RWD）
-  - 適配手機與桌機裝置，提升跨裝置的瀏覽體驗。
+```js(jQuery)```
+for (let i = 0; i < data.length; i++) {
+        if (!data[i] || !data[i].PicURL || !data[i].Name) {
+          console.log("Skipping entry", i);
+          continue;
+        }
+````````````````
 
-7. 趣味視覺元素
+5. RWD 響應式設計
+  - 利用純 CSS 和 Grid 版面配置，打造手機與桌機裝置皆適用的響應式介面，提升跨裝置的使用體驗與瀏覽舒適度。
+
+6. 趣味視覺元素
    - 使用雲朵動畫與鄉村意象設計風格，營造農村氣息。
