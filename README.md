@@ -1,14 +1,22 @@
-# cuisine Demo
+# 農村美食 Cuisine Demo
 
-🌟 Highlights
+## 專案簡介 Project Overview
+本專案是一個結合政府開放資料的台灣農村美食搜尋網站，提供即時關鍵字搜尋與一鍵導航功能，讓使用者輕鬆探索在地特色美食。  
+This project is a Taiwanese rural cuisine search website that integrates government open data, offering real-time keyword search and one-click navigation to help users easily discover local specialties.
 
-## 1. 即時關鍵字搜尋 搜尋欄功能
+## 技術棧 Tech Stack
+
+- HTML5, CSS3 (Grid), jQuery, AJAX  
+- 政府開放資料 API (農委會旅遊美食)  
+- 響應式設計 (Responsive Web Design)  
+
+## 主要功能 Features
+
+1. **即時關鍵字搜尋 Real-time Keyword Search**  
   
-  - 支援即時搜尋：輸入文字時，自動比對關鍵字。
   - 支援 Enter 快捷鍵：在輸入欄按下 Enter 會觸發搜尋。
-  - 清空輸入欄時，自動顯示全部資料。
+  - Real-time matching while typing, and Enter key triggers search.
 
-  當使用者在搜尋欄按 Enter 執行搜尋
   ```js
   $("#searchInput").keydown(function (e) {
     if (e.key === "Enter") {
@@ -27,11 +35,13 @@
   });
   ```
 
-2. 整合政府開放資料 API
-   - 串接 農委會旅遊美食 Open Data，即時取得最新的農村美食資訊。
-
-3. 一鍵導航至 Google Maps
-   - 點擊「導航」按鈕即可跳轉 Google Maps，快速查找地點位置與路線。
+2. **整合政府開放資料 API Integrated Government Open Data API**  
+   - 即時取得最新農村美食資訊。  
+   - Fetches latest rural cuisine data from Taiwan’s Council of Agriculture Open Data.
+     
+3. **一鍵導航至 Google Maps One-click Google Maps Navigation**  
+   - 點擊「導航」快速跳轉地圖定位。  
+   - Click the "Navigate" button to quickly open Google Maps with the address.
 
 ```js
 function openMap(address) {
@@ -42,19 +52,19 @@ function openMap(address) {
     }
 ```
 
-4. 資料完整性檢查
-   - 過濾資料中缺少圖片或名稱的不完整項目，提升使用者體驗。
+4. **資料完整性檢查 Data Validation**  
+   - 過濾缺少圖片或名稱的資料，確保展示內容完整。  
+   - Filters out entries missing images or names to ensure content integrity.
 
-```js
-for (let i = 0; i < data.length; i++) {
-        if (!data[i] || !data[i].PicURL || !data[i].Name) {
-          console.log("Skipping entry", i);
-          continue;
-        }
-```
+5. **響應式設計 Responsive Design**  
+   - 適用於桌面與行動裝置，使用 CSS Grid 版面配置。  
+   - Supports desktop and mobile devices using CSS Grid layout.
 
-5. RWD 響應式設計
-  - 利用純 CSS 和 Grid 版面配置，打造手機與桌機裝置皆適用的響應式介面，提升跨裝置的使用體驗與瀏覽舒適度。
+6. **視覺效果 Visual Enhancements**  
+   - 雲朵動畫與農村風格設計，提升使用者體驗。  
+   - Cloud animations and rural theme design enhance user experience.
 
-6. 趣味視覺元素
-   - 使用雲朵動畫與鄉村意象設計風格，營造農村氣息。
+
+## 聯絡 Contact
+Tina Lee 
+Email: wt.tinalee@gmail.com
