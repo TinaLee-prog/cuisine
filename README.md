@@ -7,9 +7,9 @@
   - 支援即時搜尋：輸入文字時，自動比對關鍵字。
   - 支援 Enter 快捷鍵：在輸入欄按下 Enter 會觸發搜尋。
   - 清空輸入欄時，自動顯示全部資料。
-  
-  ```js```
+
   // 當使用者在搜尋欄按 Enter 執行搜尋
+  ```js
   $("#searchInput").keydown(function (e) {
     if (e.key === "Enter") {
       searchDestination();
@@ -18,6 +18,7 @@
   ```
   
   // 當輸入內容清空時，自動還原所有資料
+```js
   $("#searchInput").on("input", function () {
     let keyword = $(this).val().trim();
     if (keyword === "") {
