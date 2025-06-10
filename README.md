@@ -8,7 +8,7 @@
   - 支援 Enter 快捷鍵：在輸入欄按下 Enter 會觸發搜尋。
   - 清空輸入欄時，自動顯示全部資料。
 
-  // 當使用者在搜尋欄按 Enter 執行搜尋
+  當使用者在搜尋欄按 Enter 執行搜尋
   ```js
   $("#searchInput").keydown(function (e) {
     if (e.key === "Enter") {
@@ -17,7 +17,7 @@
   });
   ```
   
-  // 當輸入內容清空時，自動還原所有資料
+當輸入內容清空時，自動還原所有資料
 ```js
   $("#searchInput").on("input", function () {
     let keyword = $(this).val().trim();
@@ -33,26 +33,25 @@
 3. 一鍵導航至 Google Maps
    - 點擊「導航」按鈕即可跳轉 Google Maps，快速查找地點位置與路線。
 
-```js```
+```js
 function openMap(address) {
       window.open(
         `https://maps.google.com/?q=${encodeURIComponent(address)}`,
         "_blank"
       );
     }
-````````
+```
 
 4. 資料完整性檢查
    - 過濾資料中缺少圖片或名稱的不完整項目，提升使用者體驗。
 
-```js```
-//jQuery
+```js
 for (let i = 0; i < data.length; i++) {
         if (!data[i] || !data[i].PicURL || !data[i].Name) {
           console.log("Skipping entry", i);
           continue;
         }
-````````````````
+```
 
 5. RWD 響應式設計
   - 利用純 CSS 和 Grid 版面配置，打造手機與桌機裝置皆適用的響應式介面，提升跨裝置的使用體驗與瀏覽舒適度。
