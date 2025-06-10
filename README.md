@@ -1,13 +1,14 @@
 # cuisine Demo
 
 🌟 Highlights
-1. 即時關鍵字搜尋 搜尋欄功能：   
+
+## 1. 即時關鍵字搜尋 搜尋欄功能
   
   - 支援即時搜尋：輸入文字時，自動比對關鍵字。
   - 支援 Enter 快捷鍵：在輸入欄按下 Enter 會觸發搜尋。
   - 清空輸入欄時，自動顯示全部資料。
   
-  ```js（jQuery）```
+  ```js```
   // 當使用者在搜尋欄按 Enter 執行搜尋
   $("#searchInput").keydown(function (e) {
     if (e.key === "Enter") {
@@ -42,7 +43,8 @@ function openMap(address) {
 4. 資料完整性檢查
    - 過濾資料中缺少圖片或名稱的不完整項目，提升使用者體驗。
 
-```js(jQuery)```
+```js```
+//jQuery
 for (let i = 0; i < data.length; i++) {
         if (!data[i] || !data[i].PicURL || !data[i].Name) {
           console.log("Skipping entry", i);
