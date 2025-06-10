@@ -25,7 +25,8 @@ This project is a Taiwanese rural cuisine search website that integrates governm
   });
   ```
   
-當輸入內容清空時，自動還原所有資料
+- 當輸入內容清空時，自動還原所有資料
+- When the input field is cleared, the full dataset is automatically displayed again.
 ```js
   $("#searchInput").on("input", function () {
     let keyword = $(this).val().trim();
